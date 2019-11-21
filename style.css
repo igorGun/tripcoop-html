@@ -1,0 +1,186 @@
+/* Always set the map height explicitly to define the size of the div
+             * element that contains the map. */
+#map {
+    height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+#floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto', 'sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+*/
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(0,0,0,0.65);
+    text-align: center;
+    display: inline-block;
+    padding: 6px 12px;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+.btn:active,
+.btn:focus {
+    outline: 0;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    border-color: #d9d9d9;
+}
+
+.btn-secondary:hover {
+    color: #dedede;
+    border-color: #dedede;
+}
+
+.btn-secondary:active {
+    color: #adadad;
+    border-color: #adadad;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #47b35d;
+    border-color: #47b35d;
+}
+
+.btn-success:active {
+    background-color: #188034;
+    border-color: #188034;
+}
+
+.control-label {
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 5px;
+}
+
+.form-control {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    line-height: 21px;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.info-window *,
+.info-window *::before,
+.info-window *::after {
+    box-sizing: inherit;
+}
+
+.info-window {
+    box-sizing: border-box;
+}
+
+.info-window__header {
+    display: flex;
+}
+
+.info-window__actions {
+    padding-left: 10px;
+}
+
+.info-window__btn {
+    padding: 0;
+}
+
+.info-window__icon {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.info-window__content {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.info-window .form-group {
+    margin-bottom: 15px;
+}
+
+.info-window .form-group:last-child {
+    margin-bottom: 0;
+}
+
+.info-window__form-buttons {
+    padding-top: 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-window__form-buttons .btn {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 459px) {
+    .info-window__form-buttons .btn {
+        margin-bottom: 10px;
+    }
+    .info-window__form-buttons .btn:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 460px) {
+    .info-window__form-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .info-window__form-buttons .btn {
+        flex: 1 0 auto;
+    }
+    .info-window__form-buttons .btn:first-child:not(:last-child) {
+        margin-right: 5px;
+    }
+}
