@@ -184,7 +184,8 @@ header {
   align-items: center;
   justify-content: center;
   background-color: #0e161c;
-  height: 64px;
+  /* height: 64px; */
+  height: auto;
   font-family: "PT Sans", sans-serif;
 }
 
@@ -203,7 +204,7 @@ header {
 }
 
 .nav-item.header-nav-item {
-  padding: 20px 10px 19px 10px;
+  padding: 20px 5px;
 }
 
 .nav-link.header-nav-link {
@@ -225,7 +226,7 @@ header {
 .right-panel {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
   flex-basis: 24%;
 }
 
@@ -246,7 +247,7 @@ header {
   border: 2px solid #ffd700;
   padding: 5px 22px;
   font-family: "PT Sans", sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   display: none;
 }
 
@@ -255,7 +256,7 @@ header {
   border: 2px solid #ffd700;
   padding: 5px 22px;
   font-family: "PT Sans", sans-serif;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 #w0 {
@@ -273,38 +274,36 @@ header {
 
 .username-block {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  width: 200px;
-  padding: 5px 0;
+  /* display: none; */
 }
 
 .username-block-img {
   display: flex;
   flex-direction: column;
-  flex-basis: 40%;
+  flex-basis: 70%;
   align-items: center;
-  padding: 0;
-  height: 50px;
-
+  justify-content: center;
+  padding: 3px 15px 1px 0;
 }
 
 .header-out_button {
-  flex-basis: 40%;
+  flex-basis: 30%;
 }
 
 .username-img {
-  height: 35px;
-  width: 35px;
+  height: 44px;
+  width: 44px;
   background: white;
   border-radius: 50%;
-  border: 1px solid #ffd700;
 }
 
 .username-item {
   color: white;
   font-size: 11px;
+  margin: 0;
+  text-align: center;
 }
 
 @media screen and (max-width: 459px) {
