@@ -127,10 +127,14 @@ button:not(:disabled) {
 
 .info-window__header {
   display: flex;
+  /* flex-wrap: wrap;
+  justify-content: center; */
 }
 
 .info-window__actions {
   padding-left: 10px;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .info-window__btn {
@@ -309,12 +313,21 @@ header {
 }
 
 @media screen and (max-width: 459px) {
+  .info-window__actions .btn {
+    padding: 2px;
+  }
+
+  .info-window__form-buttons {
+    width: 100%;
+  }
+
   .info-window__form-buttons .btn {
     margin-bottom: 10px;
   }
 
   .info-window__form-buttons .btn:last-child {
     margin-bottom: 0;
+    max-width: 100%;
   }
 }
 
@@ -323,13 +336,10 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+    max-width: 100%;
   }
 
   .info-window__form-buttons .btn {
     flex: 1 0 auto;
-  }
-
-  .info-window__form-buttons .btn:first-child:not(:last-child) {
-    margin-right: 5px;
   }
 }
