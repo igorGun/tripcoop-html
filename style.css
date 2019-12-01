@@ -160,17 +160,19 @@ button:not(:disabled) {
   padding-top: 1px;
   display: flex;
   flex-direction: column;
+  width: 50%;
 }
 
 .info-window__form-buttons .btn {
-  flex: 0 0 100%;
-  max-width: 100%;
+  /* flex: 0 0 100%; */
+  /* width: 50%; */
 }
 
 /* main menu */
 
 #map {
   position: relative;
+  z-index: 1;
 }
 
 header {
@@ -320,7 +322,7 @@ header {
   .info-window__form-buttons {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 
   .info-window__form-buttons .btn {
