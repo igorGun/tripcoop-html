@@ -11,12 +11,10 @@ var markers = {};
 
 var latlng;
 
-var myLatLng = [
-  {
-    lat: 49.992157,
-    lng: 36.231082,
-  },
-];
+var myLatLng = [{
+  lat: 49.992157,
+  lng: 36.231082,
+}, ];
 for (var i = 0; i < myLatLng.length; i++) {
   console.log(i, myLatLng[i]);
   var marker = new google.maps.Marker({
