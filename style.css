@@ -211,7 +211,7 @@ header {
 }
 
 .header-logo {
-  height: 44px;
+  height: 60px;
 }
 
 .header-menu-items {
@@ -221,7 +221,7 @@ header {
 }
 
 .nav-item.header-nav-item {
-  padding: 20px 5px;
+  padding: 20px 10px;
 }
 
 .nav-link.header-nav-link {
@@ -270,7 +270,7 @@ header {
 
 .btn-dark.btn-dark-out {
   border-radius: 25px;
-  border: 2px solid #ffd700;
+  border: 1px solid #ffd700;
   padding: 5px 22px;
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
@@ -282,7 +282,7 @@ header {
 
 .btn-dark.btn-dark-sign_in:hover,
 .btn-dark.btn-dark-out:hover {
-  border: 2px solid #ffd700;
+  border: 1px solid #ffd700;
   background: #ffd70025;
   -moz-box-shadow: inset 0 0 10px #ffd700;
   -webkit-box-shadow: inset 0 0 10px #ffd700;
@@ -334,6 +334,7 @@ header {
 
 .form-header {
   text-align: center;
+  margin-bottom: 9px;
 }
 
 .form-order {
