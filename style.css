@@ -511,6 +511,15 @@ header {
   box-shadow: none;
 }
 
+.fa.fa-paper-plane.send-message-icon {
+  color: #28a745;
+  font-size: 25px;
+}
+
+.fa.fa-paper-plane.send-message-icon:hover {
+  color: #0b1a0b;
+}
+
 @media screen and (max-width: 459px) {
   .info-window__actions .btn {
     padding: 2px;
