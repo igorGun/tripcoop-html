@@ -1,184 +1,268 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>
-      Cool
-    </title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <meta charset="utf-8" />
-    <link href="style.css" rel="stylesheet" />
-    <link href="authchoice.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script
-      src="https://maps.googleapis.com/maps/api/js?language=ru&key=AIzaSyCs9SFggVR2vYA-qzvxeNwz_2pZZemqoLg&libraries=places"
-    >
-      //&callback=initMap
-    </script>
-  </head>
 
-  <body>
-    <header>
-      <!-- ======================================Navigation Bar================================================= -->
-      <nav class="navbar header-navbar">
-        <div class="div-header-logo">
-          <a class="brand-navbar" href="#">
-            <img class="header-logo" src="img/4_logo.svg" alt="Responsive image"
-          /></a>
-        </div>
-        <!-- <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
+<head>
+  <title>
+    Cool
+  </title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta charset="utf-8" />
+  <link href="style.css" rel="stylesheet" />
+  <link href="authchoice.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script
+    src="https://maps.googleapis.com/maps/api/js?language=ru&key=AIzaSyCs9SFggVR2vYA-qzvxeNwz_2pZZemqoLg&libraries=places">
+    //&callback=initMap
+  </script>
+</head>
+
+<body>
+  <header>
+    <!-- ======================================Navigation Bar================================================= -->
+    <nav class="navbar header-navbar">
+      <div class="div-header-logo">
+        <a class="brand-navbar" href="#">
+          <img class="header-logo" src="img/4_logo.svg" alt="Responsive image" /></a>
+      </div>
+      <!-- <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
                 <span><i class="fa fa-bars"></i></span>
             </button> -->
-        <!-- <div class="center-panel"> -->
-        <div class="header-menu-items">
-          <div class=" nav-item header-nav-item active">
-            <a href="#" class="nav-link header-nav-link">Предварительные поездки</a>
+      <!-- <div class="center-panel"> -->
+      <div class="header-menu-items">
+        <div class=" nav-item header-nav-item active">
+          <a href="#" class="nav-link header-nav-link">Предварительные поездки</a>
+        </div>
+        <div class="nav-item header-nav-item">
+          <a href="#" class="nav-link header-nav-link">Искать поездку</a>
+        </div>
+        <div class="nav-item header-nav-item">
+          <a href="#" class="nav-link header-nav-link">Создать поездку</a>
+        </div>
+        <div class="nav-item header-nav-item">
+          <a href="#" class="nav-link header-nav-link">Пользователь</a>
+        </div>
+      </div>
+      <div class="right-panel">
+        <div id="w0">
+          <ul class="auth-clients">
+            <li>
+              <a class="google auth-link" href="/user/auth?authclient=google" title="Google"><span
+                  class="auth-icon google"></span></a>
+            </li>
+            <li>
+              <a class="facebook auth-link" href="/user/auth?authclient=facebook" title="Facebook"><span
+                  class="auth-icon facebook"></span></a>
+            </li>
+            <li>
+              <a class="twitter auth-link" href="/user/auth?authclient=twitter" title="Twitter"><span
+                  class="auth-icon twitter"></span></a>
+            </li>
+            <li>
+              <a class="instagram auth-link" href="/user/auth?authclient=instagram" title="Instagram"><span
+                  class="auth-icon instagram"></span></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header-sign-in_button">
+          <button type="button" class="btn btn-dark btn-dark-sign_in">Войти</button>
+        </div>
+
+        <div class="username-block">
+          <div class="username-block-img">
+            <div>
+              <img class="username-img" src="img/user-circle-solid.svg" alt="Responsive image" />
+            </div>
+            <p class="username-item">username</p>
           </div>
-          <div class="nav-item header-nav-item">
-            <a href="#" class="nav-link header-nav-link">Искать поездку</a>
-          </div>
-          <div class="nav-item header-nav-item">
-            <a href="#" class="nav-link header-nav-link">Создать поездку</a>
-          </div>
-          <div class="nav-item header-nav-item">
-            <a href="#" class="nav-link header-nav-link">Пользователь</a>
+          <div class="header-out_button">
+            <button type="button" class="btn btn-dark btn-dark-out">Виход</button>
           </div>
         </div>
-        <div class="right-panel">
-          <div id="w0">
-            <ul class="auth-clients">
-              <li>
-                <a class="google auth-link" href="/user/auth?authclient=google" title="Google"
-                  ><span class="auth-icon google"></span
-                ></a>
-              </li>
-              <li>
-                <a class="facebook auth-link" href="/user/auth?authclient=facebook" title="Facebook"
-                  ><span class="auth-icon facebook"></span
-                ></a>
-              </li>
-              <li>
-                <a class="twitter auth-link" href="/user/auth?authclient=twitter" title="Twitter"
-                  ><span class="auth-icon twitter"></span
-                ></a>
-              </li>
-              <li>
-                <a
-                  class="instagram auth-link"
-                  href="/user/auth?authclient=instagram"
-                  title="Instagram"
-                  ><span class="auth-icon instagram"></span
-                ></a>
-              </li>
-            </ul>
-          </div>
+      </div>
+    </nav>
+  </header>
 
-          <div class="header-sign-in_button">
-            <button type="button" class="btn btn-dark btn-dark-sign_in">Войти</button>
-          </div>
+  <div id="map"></div>
 
-          <div class="username-block">
-            <div class="username-block-img">
-              <div>
-                <img class="username-img" src="img/user-circle-solid.svg" alt="Responsive image" />
-              </div>
-              <p class="username-item">username</p>
+  <script src="index.js"></script>
+
+  <div class="order-block">
+    <form>
+      <div class="form-order">
+        <div class="form-header">
+          <h5>Онлайн замовлення</h5>
+        </div>
+        <div class="input-line">
+          <div class="input-group mb-3 where-input">
+            <input type="text" class="form-control where-input" placeholder="Откуда" />
+            <div class="input-group-append input-gps">
+              <span class="input-group-text input-gps"><img class="gps-img" src="img/gps.png" /></span>
             </div>
-            <div class="header-out_button">
-              <button type="button" class="btn btn-dark btn-dark-out">Виход</button>
-            </div>
+          </div>
+          <div class="form-right-icons add">
+            <img class="gps-img add" src="img/add.png" alt="" />
           </div>
         </div>
-      </nav>
-    </header>
-
-    <div id="map"></div>
-
-    <script src="index.js"></script>
-
-    <div class="order-block">
-      <form>
-        <div class="form-order">
-          <div class="form-header">
-            <h5>Онлайн замовлення</h5>
-          </div>
-          <div class="input-line">
-            <div class="input-group mb-3 where-input">
-              <input type="text" class="form-control where-input" placeholder="Откуда" />
-              <div class="input-group-append input-gps">
-                <span class="input-group-text input-gps"
-                  ><img class="gps-img" src="img/gps.png"
-                /></span>
-              </div>
-            </div>
-            <div class="form-right-icons add">
-              <img class="gps-img add" src="img/add.png" alt="" />
+        <div class="input-line">
+          <div class="input-group mb-3 where-input">
+            <input type="text" class="form-control where-input" placeholder="Куда" />
+            <div class="input-group-append input-gps">
+              <span class="input-group-text input-gps">
+                <img class="gps-img" src="img/gps.png" /></span>
             </div>
           </div>
-          <div class="input-line">
-            <div class="input-group mb-3 where-input">
-              <input type="text" class="form-control where-input" placeholder="Куда" />
-              <div class="input-group-append input-gps">
-                <span class="input-group-text input-gps">
-                  <img class="gps-img" src="img/gps.png"
-                /></span>
-              </div>
-            </div>
-            <div class="form-right-icons">
-              <img class="gps-img edit" src="img/edit.png" alt="" />
-              <img class="gps-img confirm" src="img/confirm.png" alt="" />
+          <div class="form-right-icons">
+            <img class="gps-img edit" src="img/edit.png" alt="" />
+            <img class="gps-img confirm" src="img/confirm.png" alt="" />
+          </div>
+        </div>
+        <div class="bottom-clock-form">
+          <div class="form-group field-trips-max_companions">
+            <label class="control-label" for="trips-max_companions">Max Companions</label>
+            <div>
+              <select id="trips-max_companions" class="form-control" name="Trips[max_companions]">
+                <option value="1">1</option>
+                <option value="2" selected="">2</option>
+                <option value="3">3</option>
+              </select>
             </div>
           </div>
-          <div class="bottom-clock-form">
-            <div class="form-group field-trips-max_companions">
-              <label class="control-label" for="trips-max_companions">Max Companions</label>
-              <div>
-                <select id="trips-max_companions" class="form-control" name="Trips[max_companions]">
-                  <option value="1">1</option>
-                  <option value="2" selected="">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
+          <div class="form-group field-trips-departure_time required">
+            <label class="control-label" for="trips-departure_time">Departure Time</label>
+            <div>
+              <select id="trips-departure_time" class="form-control" name="Trips[departure_time]" aria-required="true">
+                <option value="0">5</option>
+                <option value="1">10</option>
+                <option value="2">15</option>
+                <option value="3">20</option>
+                <option value="4">30</option>
+                <option value="5">60</option>
+                <option value="6">90</option>
+                <option value="7">120</option>
+              </select>
             </div>
-            <div class="form-group field-trips-departure_time required">
-              <label class="control-label" for="trips-departure_time">Departure Time</label>
-              <div>
-                <select
-                  id="trips-departure_time"
-                  class="form-control"
-                  name="Trips[departure_time]"
-                  aria-required="true"
-                >
-                  <option value="0">5</option>
-                  <option value="1">10</option>
-                  <option value="2">15</option>
-                  <option value="3">20</option>
-                  <option value="4">30</option>
-                  <option value="5">60</option>
-                  <option value="6">90</option>
-                  <option value="7">120</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group buttons">
-              <div class=" order-form">
-                <button type="button" class="btn btn-secondary">Отменить</button>
-                <button type="submit" id="set-trip-button" class="btn btn-success">
-                  Создать поездку
-                </button>
-              </div>
+          </div>
+          <div class="form-group buttons">
+            <div class=" order-form">
+              <button type="button" class="btn btn-secondary">Отменить</button>
+              <button type="submit" id="set-trip-button" class="btn btn-success">
+                Создать поездку
+              </button>
             </div>
           </div>
         </div>
-      </form>
+      </div>
+    </form>
+  </div>
+
+  <!--------------------- chat box --------------------------->
+
+  <div class="chat-block">
+    <div class="card-chat">
+      <!-- chat header -->
+      <div class="card-header card-header_chat">
+        <div class="header-chat-text">
+          <div class="my-0">
+            <b>Some name</b>
+          </div>
+          <div class="my-0">
+            <small>last seen Dec 5 2019</small>
+          </div>
+        </div>
+        <div class="header-chat-button">
+          <button type="button" class="close chat-close-btn" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+      <!-- card body -->
+      <div class="card-body card-body_chat">
+        <div class="user-message_left">
+          <div class="user-chat-img">
+            <img class="chat-user-img" src="img/user-circle-regular.svg" alt="" />
+          </div>
+          <div class="card-body-message_left">
+            <div class="card-body-message_item">
+              <div><span class="mx-2">Hi, some name</span></div>
+              <div><span class="chat-time"><small>14:13</small></span></div>
+              <div><span class="chat-see-icon"><small><i class="fa fa-eye fa-fw"></i></small></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="user-message_right">
+          <div class="card-body-message_right">
+            <div class="card-body-message_item">
+              <div><span class="mx-2">:)</span></div>
+              <div><span class="chat-time"><small>14:13</small></span></div>
+              <div><span class="hat-see-icon"><small><i class="fa fa-eye fa-fw"></i></small></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="user-message_right">
+          <div class="card-body-message_right">
+            <div class="card-body-message_item">
+              <div><span class="mx-2">Hi, other name</span></div>
+              <div><span class="chat-time"><small>14:13</small></span></div>
+              <div><span class="hat-see-icon"><small><i class="fa fa-eye fa-fw"></i></small></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="user-message_left">
+          <div class="user-chat-img">
+            <img class="chat-user-img" src="img/user-circle-regular.svg" alt="" />
+          </div>
+          <div class="card-body-message_left">
+            <div class="card-body-message_item">
+              <div><span class="mx-2">Hi, some name</span></div>
+              <div><span class="chat-time"><small>14:13</small></span></div>
+              <div><span class="hat-see-icon"><small><i class="fa fa-eye fa-fw"></i></small></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="user-message_left">
+          <div class="user-chat-img">
+            <img class="chat-user-img" src="img/user-circle-regular.svg" alt="" />
+          </div>
+          <div class="card-body-message_left">
+            <div class="card-body-message_item">
+              <div><span class="mx-2">Hi, text text text text text text text text text text</span></div>
+              <div><span class="chat-time"><small>14:13</small></span></div>
+              <div><span class="hat-see-icon"><small><i class="fa fa-eye fa-fw"></i></small></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="user-message_right">
+          <div class="card-body-message_right">
+            <div class="card-body-message_item">
+              <div><span class="mx-2">Some text some text some text 123</span></div>
+              <div><span class="chat-time"><small>14:13</small></span></div>
+              <div><span class="hat-see-icon"><small><i class="fa fa-eye fa-fw"></i></small></span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="chat-footer">
+
+        <div class="input-group">
+          <textarea class="form-control message-input" rows="5" id="comment" name="text"
+            placeholder="Input message..."></textarea>
+          <span class="input-group-addon">
+            <button class="btn send-btn" type="button">
+              <img class="chat-user-img" src="img/telegram-plane-brands.svg" alt="" />
+            </button>
+          </span>
+        </div>
+      </div>
     </div>
-  </body>
+  </div>
+  </div>
+  </div>
+
+  </div>
+</body>
+
 </html>

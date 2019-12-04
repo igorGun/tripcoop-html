@@ -10,7 +10,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
 }
 
 /*
@@ -30,7 +30,7 @@ body {
 */
 
 .btn {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
@@ -49,9 +49,9 @@ body {
   border-radius: 4px;
 }
 
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled),
+[type='button']:not(:disabled),
+[type='reset']:not(:disabled),
+[type='submit']:not(:disabled),
 button:not(:disabled) {
   cursor: pointer;
 }
@@ -99,7 +99,7 @@ button:not(:disabled) {
 }
 
 .form-control {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   display: block;
@@ -203,7 +203,7 @@ header {
   background-color: #0e161c;
   /* height: 64px; */
   height: auto;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .div-header-logo {
@@ -263,7 +263,7 @@ header {
   border-radius: 25px;
   border: 2px solid #ffd700;
   padding: 5px 22px;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-size: 13px;
   display: none;
 }
@@ -272,7 +272,7 @@ header {
   border-radius: 25px;
   border: 1px solid #ffd700;
   padding: 5px 22px;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-size: 13px;
 }
 
@@ -355,6 +355,7 @@ header {
 .input-group.mb-3.where-input {
   margin-right: 10px;
   width: 280px;
+  height: auto;
 }
 .gps-img {
   width: 20px;
@@ -397,6 +398,117 @@ header {
 
 .gps-img.edit {
   margin-right: 10px;
+}
+
+/* ------------------------------chat block styles-----------------------*/
+
+.chat-block {
+  position: absolute;
+  top: 150px;
+  z-index: 10;
+  right: 50px;
+  padding: 10px;
+  width: 350px;
+}
+
+.card-chat {
+  background: white;
+  border-radius: 8px;
+}
+
+.card-header.card-header_chat {
+  background: #28a745;
+  color: white;
+  padding: 8px 10px 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.close.chat-close-btn {
+  font-size: 40px;
+}
+
+.card-body.card-body_chat {
+  padding: 10px 10px 20px 10px;
+  background: white;
+  font-size: 14px;
+  border-radius: 0 0 8px 8px;
+  overflow-y: auto;
+  height: 300px;
+  color: #232b23;
+}
+
+.user-message_left {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.user-message_right {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.card-body-message_left {
+  background: #e9e97e;
+  padding: 5px;
+  margin: 0 5px;
+  display: inline-block;
+  border-radius: 10px 10px 10px 0px;
+  max-width: 250px;
+}
+
+.card-body-message_right {
+  background: #67e16b;
+  padding: 5px;
+  margin: 0 5px;
+  max-width: 250px;
+  display: inline-block;
+  border-radius: 10px 10px 0px 10px;
+  background: #d3f2d9;
+}
+
+.chat-user-img {
+  width: 30px;
+  height: 30px;
+}
+
+.card-body-message_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.fa.fa-eye.fa-fw {
+  color: green;
+}
+
+.chat-footer {
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+  border-top: 2px solid gray;
+}
+
+.chat-telegram-img {
+  width: 20px;
+  height: 20px;
+}
+
+.form-control.message-input {
+  height: 40px;
+  border-radius: 8px !important;
+}
+
+.form-control.message-input:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.btn.send-btn:focus {
+  box-shadow: none;
 }
 
 @media screen and (max-width: 459px) {
