@@ -19,25 +19,43 @@
 </head>
 
 <body>
+  <!-- <div class="main-container"> -->
   <header>
     <!-- ======================================Navigation Bar================================================= -->
     <nav class="navbar header-navbar">
       <div class="responsive-menu-button">
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#mainMenu"
-          aria-expanded="false" aria-controls="mainMenu">
-          <span><i class="fa fa-bars"></i></span>
+        <button onclick="toggleMenuButton()" class="btn btn-primary toggle-menu-btn">
+          <span id="fa-bars-icon"><i class="fa fa-bars"></i></span>
+          <span id="fa-times-icon"><i class="fa fa-times fa-times-icon" aria-hidden="true"></i></span>
         </button>
       </div>
       <div class="div-header-logo">
         <a class="brand-navbar" href="#">
           <img class="header-logo" src="img/4_logo.svg" alt="Responsive image" /></a>
       </div>
-
       <div class="responsive-sign-block">
         <img class="username-img" src="img/user-circle-regular.svg" alt="Responsive image" />
       </div>
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
-      <div class="header-menu-items">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="header-menu-items" id="mainMenuItems">
         <div class=" nav-item header-nav-item active">
           <a href="#" class="nav-link header-nav-link">Предварительные поездки</a>
         </div>
@@ -51,8 +69,6 @@
           <a href="#" class="nav-link header-nav-link">Пользователь</a>
         </div>
       </div>
-
-
       <div class="right-panel">
         <div id="w0">
           <ul class="auth-clients">
@@ -74,11 +90,9 @@
             </li>
           </ul>
         </div>
-
         <div class="header-sign-in_button">
           <button type="button" class="btn btn-dark btn-dark-sign_in">Войти</button>
         </div>
-
         <div class="username-block">
           <div class="username-block-img">
             <div>
@@ -272,6 +286,7 @@
   </div>
 
   </div>
+  <!-- </div> -->
 </body>
 
 </html>

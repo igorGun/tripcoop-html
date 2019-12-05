@@ -98,3 +98,21 @@ function bindMarkerinfo(marker) {
   infowindow.setContent(markerWindow());
   infowindow.open(map, marker);
 }
+
+function toggleMenuButton() {
+  var menuItems = document.getElementById("mainMenuItems");
+  var faBarsIcon = document.getElementById("fa-bars-icon");
+  var faTimesIcon = document.getElementById("fa-times-icon");
+  var headerNavbar = document.getElementsByClassName("navbar header-navbar");
+  if (menuItems.style.display === "none") {
+    menuItems.style.display = "block";
+    faBarsIcon.style.display = "none";
+    faTimesIcon.style.display = "block";
+    headerNavbar.style.position = "relative";
+  } else {
+    menuItems.style.display = "none";
+    faBarsIcon.style.display = "block";
+    faTimesIcon.style.display = "none";
+    headerNavbar.style.position = "sticky";
+  }
+}

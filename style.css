@@ -203,6 +203,8 @@ header {
   background-color: #0e161c;
   height: auto;
   font-family: 'PT Sans', sans-serif;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .div-header-logo {
@@ -535,6 +537,21 @@ header {
   display: none;
 }
 
+.btn.btn-primary.toggle-menu-btn {
+  background: none;
+  border: none;
+  font-size: 35px;
+}
+
+.btn.btn-primary.toggle-menu-btn:focus {
+  box-shadow: none;
+  background: none;
+}
+
+#fa-times-icon {
+  display: none;
+}
+
 @media screen and (max-width: 459px) {
   .info-window__actions .btn {
     padding: 2px;
@@ -568,14 +585,22 @@ header {
 }
 
 @media screen and (max-width: 1200px) {
-  .header-menu-items {
-    flex-basis: 100%;
-    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar.header-navbar {
+    flex-wrap: wrap;
+    padding: 5px 0 0 0;
+    justify-content: space-around;
   }
 
-  .navbar.header-navbar {
-    justify-content: space-between;
-    padding: 5px 50px;
+  .header-menu-items {
+    flex-basis: 100%;
+    flex-direction: column;
+    justify-content: center;
+    background: #6666;
+    margin-top: 5px;
+    display: none;
   }
 
   .right-panel {
@@ -586,12 +611,6 @@ header {
     display: block;
   }
 
-  .nav-link.header-nav-link {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 768px) {
   .responsive-menu-button {
     display: block;
   }
@@ -600,7 +619,15 @@ header {
     font-size: 18px;
   }
 
-  .header-menu-items {
-    flex-direction: column;
+  .div-header-logo {
+    margin-bottom: 5px;
+  }
+
+  .order-block {
+    position: inherit;
+  }
+
+  .chat-block {
+    position: inherit;
   }
 }
