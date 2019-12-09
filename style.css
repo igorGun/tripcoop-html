@@ -10,7 +10,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 /*
@@ -30,7 +30,7 @@ body {
 */
 
 .btn {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
@@ -49,9 +49,9 @@ body {
   border-radius: 4px;
 }
 
-[type='button']:not(:disabled),
-[type='reset']:not(:disabled),
-[type='submit']:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
 button:not(:disabled) {
   cursor: pointer;
 }
@@ -99,7 +99,7 @@ button:not(:disabled) {
 }
 
 .form-control {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 400;
   display: block;
@@ -202,7 +202,7 @@ header {
   justify-content: space-between;
   background-color: #0e161c;
   height: auto;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -270,7 +270,7 @@ header {
   border-radius: 25px;
   border: 2px solid #ffd700;
   padding: 5px 22px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 13px;
   /* display: none; */
 }
@@ -279,7 +279,7 @@ header {
   border-radius: 25px;
   border: 1px solid #ffd700;
   padding: 5px 22px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 13px;
 }
 
@@ -552,6 +552,14 @@ header {
   display: none;
 }
 
+.open-box-buttons {
+  display: none;
+}
+
+.close-order-box-btn {
+  display: none;
+}
+
 @media screen and (max-width: 459px) {
   .info-window__actions .btn {
     padding: 2px;
@@ -625,9 +633,46 @@ header {
 
   .order-block {
     position: inherit;
+    display: none;
+    height: 100%;
+    background: gainsboro;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .close-order-box-btn button {
+    width: 100%;
+  }
+
+  .form-order {
+    border-radius: 4px 4px 0 0;
   }
 
   .chat-block {
-    position: inherit;
+    display: none;
+  }
+
+  .card-header.card-header_chat {
+    border-radius: 0 !important;
+  }
+
+  .card-body.card-body_chat {
+    height: 400px;
+  }
+
+  .open-box-buttons {
+    display: flex;
+    margin-top: -40px;
+    z-index: 6;
+    position: relative;
+    justify-content: space-between;
+    padding: 0 10px;
+    flex-wrap: wrap;
+  }
+
+  .btn.btn-success.open-order-box-btn,
+  .btn.btn-success.open-chat-box-btn {
+    flex-basis: 45%;
   }
 }

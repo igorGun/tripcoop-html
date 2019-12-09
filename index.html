@@ -111,8 +111,17 @@
   <div id="map"></div>
 
   <script src="index.js"></script>
-
-  <div class="order-block">
+  <div class="open-box-buttons">
+    <div>
+    <a href="#order-block"><button type="button" class="btn btn-success open-order-box-btn" onclick="openOrderBoxButton()">
+      Информация поездки
+    </button></a>
+  </div>
+    <button type="button" class="btn btn-success open-chat-box-btn" onclick="openChatBoxButton()">
+      Открить чат
+    </button>
+  </div>
+  <div class="order-block" id="order-block">
     <form>
       <div class="form-order">
         <div class="form-header">
@@ -174,12 +183,19 @@
               <button type="submit" id="set-trip-button" class="btn btn-success">
                 Создать поездку
               </button>
-            </div>
+            </div>          
           </div>
         </div>
       </div>
+        <div class="close-order-box-btn" onclick="closeOrderBoxBtn()">
+          <button type="button" class="btn btn-success">
+            Скрить
+          </button>
+        </div>
     </form>
+    
   </div>
+  
 
   <!--------------------- chat box --------------------------->
 
@@ -196,7 +212,7 @@
           </div>
         </div>
         <div class="header-chat-button">
-          <button type="button" class="close chat-close-btn" aria-label="Close">
+          <button type="button" class="close chat-close-btn" aria-label="Close" onclick="closeChatButton()">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -281,7 +297,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>  
   </div>
   </div>
 
