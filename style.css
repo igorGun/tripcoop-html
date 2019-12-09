@@ -423,12 +423,13 @@ header {
 .card-chat {
   background: white;
   border-radius: 8px;
+  background: url("img/telegram-backg.com");
 }
 
 .card-header.card-header_chat {
-  background: #28a745;
+  background: #0e161c;
   color: white;
-  padding: 8px 10px 8px 20px;
+  padding: 4px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -436,17 +437,28 @@ header {
 }
 
 .close.chat-close-btn {
-  font-size: 40px;
+  font-size: 60px;
+}
+
+.close.chat-close-btn {
+  color: yellow;
+  text-shadow: none;
+  font-weight: 300;
+  opacity: 0.8;
 }
 
 .card-body.card-body_chat {
   padding: 10px 10px 20px 10px;
-  background: white;
+
   font-size: 14px;
-  border-radius: 0 0 8px 8px;
   overflow-y: auto;
   height: 300px;
   color: #232b23;
+}
+
+.chat-user-name {
+  margin-left: 8px;
+  color: orangered;
 }
 
 .user-message_left {
@@ -498,7 +510,7 @@ header {
 .chat-footer {
   padding: 10px;
   border-radius: 0 0 8px 8px;
-  border-top: 2px solid gray;
+  background: white;
 }
 
 .chat-telegram-img {
@@ -575,7 +587,16 @@ header {
 
   .info-window__form-buttons .btn:last-child {
     margin-bottom: 0;
-    max-width: 100%;
+    width: 100%;
+  }
+
+  .order-form {
+    flex-direction: column-reverse;
+  }
+
+  .order-form .btn {
+    width: 100%;
+    margin: 2px 0;
   }
 }
 
@@ -632,25 +653,41 @@ header {
   }
 
   .order-block {
-    position: inherit;
+    position: fixed;
     display: none;
-    height: 100%;
-    background: gainsboro;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    top: unset;
+    padding: 0;
+    bottom: 0 !important;
+    width: 100%;
+    left: 0;
+  }
+
+  .close-order-box-btn {
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .close-order-box-btn button {
     width: 100%;
+    background: #0e161c;
+  }
+
+  .open-box-buttons button {
+    background: #0e161c;
   }
 
   .form-order {
     border-radius: 4px 4px 0 0;
+    padding: 10px 10px 3px 10px;
+    margin: 0 auto;
   }
 
   .chat-block {
     display: none;
+  }
+
+  .card-chat {
+    border-radius: 0;
   }
 
   .card-header.card-header_chat {
@@ -658,21 +695,27 @@ header {
   }
 
   .card-body.card-body_chat {
-    height: 400px;
+    height: 74%;
+  }
+
+  .chat-footer {
+    /* padding: 10px;
+    border-radius: 0 0 8px 8px; */
+    bottom: 0;
+    position: absolute;
+    width: 100%;
   }
 
   .open-box-buttons {
     display: flex;
-    margin-top: -40px;
     z-index: 6;
-    position: relative;
-    justify-content: space-between;
-    padding: 0 10px;
+    position: fixed;
     flex-wrap: wrap;
+    bottom: 0;
+    width: 100%;
   }
 
-  .btn.btn-success.open-order-box-btn,
-  .btn.btn-success.open-chat-box-btn {
-    flex-basis: 45%;
+  .btn.btn-success.open-order-box-btn {
+    flex-basis: 100%;
   }
 }

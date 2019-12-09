@@ -84,7 +84,7 @@ function markerWindow() {
     // '</div>' +
     '<div class="form-group">' +
     '<div class="info-window__form-buttons">' +
-    '<button type="submit" id="set-trip-button" class="btn btn-success">Искать поездку</button>' +
+    '<button type="submit" id="set-trip-button" class="btn btn-success" onclick="openChatBoxButton()">Искать поездку</button>' +
     '</div>' +
     '</div>' +
     '</form>' +
@@ -121,7 +121,7 @@ function openOrderBoxButton() {
   var openOrderBoxBtn = document.getElementsByClassName("btn btn-success open-order-box-btn");
   var orderBlock = document.getElementsByClassName("order-block");
   var closeOrderBoxBtn = document.getElementsByClassName("close-order-box-btn");
-  orderBlock[0].style.display = "flex";
+  orderBlock[0].style.display = "block";
   openOrderBoxBtn[0].style.display = "none";
   closeOrderBoxBtn[0].style.display = "block";
 }
@@ -138,7 +138,6 @@ function closeOrderBoxBtn() {
 
 function openChatBoxButton() {
   var chatBox = document.getElementsByClassName("chat-block");
-  var openChatBoxBtn = document.getElementsByClassName("btn btn-success open-chat-box-btn");
   var cardChat = document.getElementsByClassName("card-chat");
   var orderBlock = document.getElementsByClassName("order-block");
   var closeOrderBoxBtn = document.getElementsByClassName("close-order-box-btn");
@@ -152,9 +151,8 @@ function openChatBoxButton() {
   chatBox[0].style.padding = "0";
   chatBox[0].style.height = "100%";
   cardChat[0].style.height = "100%";
-  openChatBoxBtn[0].style.display = "none";
   map.style.height = "80%";
-  if (orderBlock[0].style.display === "flex") {
+  if (orderBlock[0].style.display === "block") {
     orderBlock[0].style.display = "none";
     closeOrderBoxBtn[0].style.display = "none";
     openOrderBoxBtn[0].style.display = "flex";
@@ -163,9 +161,7 @@ function openChatBoxButton() {
 
 function closeChatButton() {
   var chatBox = document.getElementsByClassName("chat-block");
-  var openChatBoxBtn = document.getElementsByClassName("btn btn-success open-chat-box-btn");
   var map = document.getElementById("map");
   chatBox[0].style.display = "none";
-  openChatBoxBtn[0].style.display = "block";
   map.style.height = "100%";
 }

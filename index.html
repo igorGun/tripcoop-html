@@ -9,6 +9,7 @@
   <meta charset="utf-8" />
   <link href="style.css" rel="stylesheet" />
   <link href="authchoice.css" rel="stylesheet" />
+  <script src="jquery-3.4.1.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -112,14 +113,9 @@
 
   <script src="index.js"></script>
   <div class="open-box-buttons">
-    <div>
-    <a href="#order-block"><button type="button" class="btn btn-success open-order-box-btn" onclick="openOrderBoxButton()">
+    <button type="button" class="btn btn-success open-order-box-btn" onclick="openOrderBoxButton()">
       Информация поездки
-    </button></a>
-  </div>
-    <button type="button" class="btn btn-success open-chat-box-btn" onclick="openChatBoxButton()">
-      Открить чат
-    </button>
+    </button> 
   </div>
   <div class="order-block" id="order-block">
     <form>
@@ -224,6 +220,7 @@
             <img class="chat-user-img" src="img/user-circle-regular.svg" alt="" />
           </div>
           <div class="card-body-message_left">
+            <div><span class="chat-user-name"><b>Some Name</b></span></div>
             <div class="card-body-message_item">
               <div><span class="mx-2">Hi, some name</span></div>
               <div><span class="chat-time"><small>14:13</small></span></div>
@@ -250,10 +247,11 @@
           </div>
         </div>
         <div class="user-message_left">
-          <div class="user-chat-img">
+          <div class="user-chat-img" style="display: none;">
             <img class="chat-user-img" src="img/user-circle-regular.svg" alt="" />
           </div>
-          <div class="card-body-message_left">
+          <div class="card-body-message_left" style="margin-left: 35px">
+            <div><span class="chat-user-name"><b>Some Name</b></span></div>
             <div class="card-body-message_item">
               <div><span class="mx-2">Hi, some name</span></div>
               <div><span class="chat-time"><small>14:13</small></span></div>
