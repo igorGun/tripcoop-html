@@ -553,6 +553,7 @@ header {
   background: none;
   border: none;
   font-size: 35px;
+  padding: 0;
 }
 
 .btn.btn-primary.toggle-menu-btn:focus {
@@ -613,8 +614,7 @@ header {
   }
 }
 
-@media screen and (max-width: 1200px) {
-}
+@media screen and (max-width: 1200px) {}
 
 @media screen and (max-width: 768px) {
   .navbar.header-navbar {
@@ -627,9 +627,12 @@ header {
     flex-basis: 100%;
     flex-direction: column;
     justify-content: center;
-    background: #6666;
+    background: #192731;
     margin-top: 5px;
     display: none;
+    position: absolute;
+    top: 64px;
+    width: 100%;
   }
 
   .right-panel {
@@ -695,7 +698,7 @@ header {
   }
 
   .card-body.card-body_chat {
-    height: 74%;
+    height: 81%;
   }
 
   .chat-footer {
