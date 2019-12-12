@@ -122,6 +122,11 @@ $(document).ready(function () {
     $('#map').css('height', '100%');
     $('.btn.btn-success.open-order-box-btn').css('display', 'block');
   })
+
+  $('.responsive-sign-block').click(function () {
+    console.log('111')
+    $('.modal-dialog').css('display', 'block');
+  })
 })
 
 function openChatBoxButton(e) {
