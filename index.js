@@ -99,60 +99,45 @@ function bindMarkerinfo(marker) {
   infowindow.open(map, marker);
 }
 
-// open-close main menu
+
 $(document).ready(function () {
+  // open-close main menu
   $(".btn.btn-primary.toggle-menu-btn").click(function (e) {
     $('#mainMenuItems').toggle();
     $('#fa-bars-icon').toggle();
     $('#fa-times-icon').toggle();
   })
+
+  // open-close order-block
+  $('.btn.btn-success.open-order-box-btn').click(function (e) {
+    $('.order-block').toggle();
+    ($('.order-block').css('display') === 'block') ?
+    $(this).text('Скрить').css('max-width', '400px').css('margin', '0 auto'):
+      $(this).text('Информация поездки').css('max-width', '100%');
+  })
+
+  // close chat-box button
+  $('.close.chat-close-btn').click(function () {
+    $('.chat-block').toggle();
+    $('#map').css('height', '100%');
+    $('.btn.btn-success.open-order-box-btn').css('display', 'block');
+  })
 })
 
-function openOrderBoxButton() {
-  var openOrderBoxBtn = document.getElementsByClassName('btn btn-success open-order-box-btn');
-  var orderBlock = document.getElementsByClassName('order-block');
-  var closeOrderBoxBtn = document.getElementsByClassName('close-order-box-btn');
-  orderBlock[0].style.display = 'block';
-  openOrderBoxBtn[0].style.display = 'none';
-  closeOrderBoxBtn[0].style.display = 'block';
-}
-
-function closeOrderBoxBtn() {
-  var openOrderBoxBtn = document.getElementsByClassName('btn btn-success open-order-box-btn');
-  var closeOrderBoxBtn = document.getElementsByClassName('close-order-box-btn');
-  var orderBlock = document.getElementsByClassName('order-block');
-  var closeOrderBoxBtn = document.getElementsByClassName('close-order-box-btn');
-  orderBlock[0].style.display = 'none';
-  closeOrderBoxBtn[0].style.display = 'none';
-  openOrderBoxBtn[0].style.display = 'block';
-}
-
-function openChatBoxButton() {
-  var chatBox = document.getElementsByClassName('chat-block');
-  var cardChat = document.getElementsByClassName('card-chat');
-  var orderBlock = document.getElementsByClassName('order-block');
-  var closeOrderBoxBtn = document.getElementsByClassName('close-order-box-btn');
-  var openOrderBoxBtn = document.getElementsByClassName('btn btn-success open-order-box-btn');
-  var map = document.getElementById('map');
-  chatBox[0].style.top = '0';
-  chatBox[0].style.zIndex = '2000';
-  chatBox[0].style.width = '100%';
-  chatBox[0].style.display = 'block';
-  chatBox[0].style.left = '0';
-  chatBox[0].style.padding = '0';
-  chatBox[0].style.height = '100%';
-  cardChat[0].style.height = '100%';
-  map.style.height = '80%';
-  if (orderBlock[0].style.display === 'block') {
-    orderBlock[0].style.display = 'none';
-    closeOrderBoxBtn[0].style.display = 'none';
-    openOrderBoxBtn[0].style.display = 'flex';
+function openChatBoxButton(e) {
+  if ($('.order-block').css('display') === 'block' && $('.btn.btn-success.open-order-box-btn').text() === 'Скрить') {
+    $('.order-block').css('display', 'none');
+    $('.btn.btn-success.open-order-box-btn').text('Информация поездки').css('max-width', '100%');
   }
-}
-
-function closeChatButton() {
-  var chatBox = document.getElementsByClassName('chat-block');
-  var map = document.getElementById('map');
-  chatBox[0].style.display = 'none';
-  map.style.height = '100%';
+  $('.chat-block').css({
+    'display': 'block',
+    'top': '0',
+    'zIndex': '2000',
+    'width': '100%',
+    'left': '0',
+    'padding': '0',
+    'height': '100%',
+  });
+  $('.card-chat').css('height', '100%');
+  $('#map').css('height', '80%');
 }

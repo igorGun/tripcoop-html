@@ -565,13 +565,11 @@ header {
   display: none;
 }
 
-.open-box-buttons {
+.btn.btn-success.open-order-box-btn {
   display: none;
 }
 
-.close-order-box-btn {
-  display: none;
-}
+
 
 @media screen and (max-width: 459px) {
   .info-window__actions .btn {
@@ -619,7 +617,7 @@ header {
 @media screen and (max-width: 768px) {
   .navbar.header-navbar {
     flex-wrap: wrap;
-    padding: 5px 0 0 0;
+    padding: 5px 0;
     justify-content: space-around;
   }
 
@@ -647,13 +645,10 @@ header {
     display: block;
   }
 
-  .nav-link.header-nav-link {
-    font-size: 18px;
+  .open-box-buttons button {
+    background: #0e161c;
   }
 
-  .div-header-logo {
-    margin-bottom: 5px;
-  }
 
   .order-block {
     position: fixed;
@@ -665,24 +660,19 @@ header {
     left: 0;
   }
 
-  .close-order-box-btn {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .close-order-box-btn button {
-    width: 100%;
-    background: #0e161c;
-  }
-
-  .open-box-buttons button {
-    background: #0e161c;
+  .btn.btn-success.open-order-box-btn,
+  .btn.btn-success.open-order-box-btn:hover,
+  .btn.btn-success.open-order-box-btn:focus {
+    background: #0e161c !important;
+    border-color: #0e161c !important;
+    box-shadow: none;
   }
 
   .form-order {
     border-radius: 4px 4px 0 0;
     padding: 10px 10px 3px 10px;
     margin: 0 auto;
+    margin-bottom: 40px;
   }
 
   .chat-block {
@@ -720,5 +710,6 @@ header {
 
   .btn.btn-success.open-order-box-btn {
     flex-basis: 100%;
+    display: block;
   }
 }
