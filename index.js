@@ -99,49 +99,60 @@ function bindMarkerinfo(marker) {
   infowindow.open(map, marker);
 }
 
-
 $(document).ready(function () {
   // open-close main menu
-  $(".btn.btn-primary.toggle-menu-btn").click(function (e) {
+  $('.btn.btn-primary.toggle-menu-btn').click(function (e) {
     $('#mainMenuItems').toggle();
     $('#fa-bars-icon').toggle();
     $('#fa-times-icon').toggle();
-  })
+  });
 
   // open-close order-block
   $('.btn.btn-success.open-order-box-btn').click(function (e) {
     $('.order-block').toggle();
-    ($('.order-block').css('display') === 'block') ?
-    $(this).text('Скрить').css('max-width', '400px').css('margin', '0 auto'):
-      $(this).text('Информация поездки').css('max-width', '100%');
-  })
+    $('.order-block').css('display') === 'block' ?
+      $(this)
+      .text('Скрить')
+      .css('max-width', '400px')
+      .css('margin', '0 auto') :
+      $(this)
+      .text('Информация поездки')
+      .css('max-width', '100%');
+  });
 
   // close chat-box button
   $('.close.chat-close-btn').click(function () {
     $('.chat-block').toggle();
     $('#map').css('height', '100%');
-    $('.btn.btn-success.open-order-box-btn').css('display', 'block');
-  })
+  });
 
   $('.responsive-sign-block').click(function () {
-    console.log('111')
-    $('.modal-dialog').css('display', 'block');
-  })
-})
+    $('.sign-in-window').toggle();
+  });
+
+  $('.sign-in-btn-close').click(function () {
+    $('.sign-in-window').toggle();
+  });
+});
 
 function openChatBoxButton(e) {
-  if ($('.order-block').css('display') === 'block' && $('.btn.btn-success.open-order-box-btn').text() === 'Скрить') {
+  if (
+    $('.order-block').css('display') === 'block' &&
+    $('.btn.btn-success.open-order-box-btn').text() === 'Скрить'
+  ) {
     $('.order-block').css('display', 'none');
-    $('.btn.btn-success.open-order-box-btn').text('Информация поездки').css('max-width', '100%');
+    $('.btn.btn-success.open-order-box-btn')
+      .text('Информация поездки')
+      .css('max-width', '100%');
   }
   $('.chat-block').css({
-    'display': 'block',
-    'top': '0',
-    'zIndex': '2000',
-    'width': '100%',
-    'left': '0',
-    'padding': '0',
-    'height': '100%',
+    display: 'block',
+    top: '0',
+    zIndex: '2000',
+    width: '100%',
+    left: '0',
+    padding: '0',
+    height: '100%',
   });
   $('.card-chat').css('height', '100%');
   $('#map').css('height', '80%');

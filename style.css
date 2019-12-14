@@ -375,7 +375,6 @@ header {
 }
 
 .form-control.where-input:focus {
-  /* box-shadow: 0px 0px 2px 2px #ced4da; */
   box-shadow: none;
   border-color: #ced4da;
 }
@@ -482,6 +481,12 @@ header {
   max-width: 250px;
 }
 
+.card-body-message_left div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+}
+
 .card-body-message_right {
   background: #67e16b;
   padding: 5px;
@@ -490,6 +495,17 @@ header {
   display: inline-block;
   border-radius: 10px 10px 0px 10px;
   background: #d3f2d9;
+}
+
+.chat-item-info {
+  display: flex;
+}
+
+.chat-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
+  align-items: flex-end;
 }
 
 .chat-user-img {
@@ -567,6 +583,43 @@ header {
 
 .btn.btn-success.open-order-box-btn {
   display: none;
+}
+
+.sign-in-window {
+  display: none;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  height: 100%;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.sign-in-window-content {
+  background: white;
+  padding: 20px 10px;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  max-width: 300px;
+}
+
+.sign-in-window-header {
+  width: 100%;
+  text-align: center;
+}
+
+.sign-in-window-header button {
+  margin-top: -15px;
+}
+
+.sign-in-window-body {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 459px) {
@@ -698,8 +751,6 @@ header {
   }
 
   .chat-footer {
-    /* padding: 10px;
-    border-radius: 0 0 8px 8px; */
     bottom: 0;
     position: absolute;
     width: 100%;
@@ -724,5 +775,19 @@ header {
   .form-order {
     height: 250px;
     overflow-y: auto;
+  }
+
+  .card-body.card-body_chat {
+    height: 88%;
+  }
+
+  .sign-in-window-content {
+    margin: 80px auto;
+  }
+}
+
+@media screen and (max-width: 569px) and (orientation: landscape) {
+  .form-order {
+    height: 200px;
   }
 }

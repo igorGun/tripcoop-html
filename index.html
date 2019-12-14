@@ -37,25 +37,7 @@
       <div class="responsive-sign-block">
         <img class="username-img" src="img/user-circle-regular.svg" alt="Responsive image" />
       </div>
-      <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
 
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Modal Header</h4>
-            </div>
-            <div class="modal-body">
-              <p>Some text in the modal.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-
-        </div>
-      </div>
       <div class="header-menu-items" id="mainMenuItems">
         <div class=" nav-item header-nav-item active">
           <a href="#" class="nav-link header-nav-link">Предварительные поездки</a>
@@ -107,8 +89,41 @@
         </div>
       </div>
     </nav>
-  </header>
 
+  </header>
+  <div class="sign-in-window">
+    <div class="sign-in-window-content">
+      <div class="sign-in-window-header">
+        <button type="button" class="close sign-in-btn-close">&times;</button>
+        <h4 class="sign-in-window-title">Авторизація</h4>
+      </div>
+      <div class="sign-in-window-body">
+        <p>Some text in the modal. Some text in the modal. Some text in the modal.</p>
+      </div>
+      <div class="sign-in-window-footer">
+        <div id="w0">
+          <ul class="auth-clients">
+            <li>
+              <a class="google auth-link" href="/user/auth?authclient=google" title="Google"><span
+                  class="auth-icon google"></span></a>
+            </li>
+            <li>
+              <a class="facebook auth-link" href="/user/auth?authclient=facebook" title="Facebook"><span
+                  class="auth-icon facebook"></span></a>
+            </li>
+            <li>
+              <a class="twitter auth-link" href="/user/auth?authclient=twitter" title="Twitter"><span
+                  class="auth-icon twitter"></span></a>
+            </li>
+            <li>
+              <a class="instagram auth-link" href="/user/auth?authclient=instagram" title="Instagram"><span
+                  class="auth-icon instagram"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="map"></div>
 
   <script src="index.js"></script>
@@ -213,7 +228,10 @@
             <img class="chat-user-img" src="img/user-circle-regular.svg" alt="" />
           </div>
           <div class="card-body-message_left">
-            <div><span class="chat-user-name"><b>Some Name</b></span></div>
+            <div>
+              <span class="chat-user-name"><b>Some Name</b></span>
+              <small class="chat-admin">Admin</small>
+            </div>
             <div class="card-body-message_item">
               <div><span class="mx-2">Hi, some name</span></div>
               <div><span class="chat-time"><small>14:13</small></span></div>
@@ -244,7 +262,10 @@
             <img class="chat-user-img" src="img/user-circle-regular.svg" alt="" />
           </div>
           <div class="card-body-message_left" style="margin-left: 35px">
-            <div><span class="chat-user-name"><b>Some Name</b></span></div>
+            <div>
+              <span class="chat-user-name"><b>Some Name</b></span>
+              <small class="chat-admin">Admin</small>
+            </div>
             <div class="card-body-message_item">
               <div><span class="mx-2">Hi, some name</span></div>
               <div><span class="chat-time"><small>14:13</small></span></div>
@@ -256,11 +277,18 @@
           <div class="user-chat-img">
             <img class="chat-user-img" src="img/user-circle-regular.svg" alt="" />
           </div>
-          <div class="card-body-message_left">
+          <div class="card-body-message_left">         
             <div class="card-body-message_item">
-              <div><span class="mx-2">Hi, text text text text text text text text text text</span></div>
+              <div>
+                <span class="mx-2">Hi, text text text text text text text text text text</span>                
+              </div>              
+              <div class="chat-info">
+              <small class="chat-admin">Admin</small>
+              <div class="chat-item-info">
               <div><span class="chat-time"><small>14:13</small></span></div>
               <div><span class="hat-see-icon"><small><i class="fa fa-eye fa-fw"></i></small></span></div>
+            </div>
+            </div>
             </div>
           </div>
         </div>
@@ -318,25 +346,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="user-message_right">
-          <div class="card-body-message_right">
-            <div class="card-body-message_item">
-              <div><span class="mx-2">Some text some text some text 123</span></div>
-              <div><span class="chat-time"><small>14:13</small></span></div>
-              <div><span class="hat-see-icon"><small><i class="fa fa-eye fa-fw"></i></small></span></div>
-            </div>
-          </div>
-        </div>
-        <div class="user-message_right">
-          <div class="card-body-message_right">
-            <div class="card-body-message_item">
-              <div><span class="mx-2">Some text some text some text 123</span></div>
-              <div><span class="chat-time"><small>14:13</small></span></div>
-              <div><span class="hat-see-icon"><small><i class="fa fa-eye fa-fw"></i></small></span></div>
-            </div>
-          </div>
-        </div> -->
-
       </div>
       <div class="chat-footer">
         <div class="input-group">
@@ -353,9 +362,7 @@
   </div>
   </div>
   </div>
-
   </div>
-  <!-- </div> -->
 </body>
 
 </html>
