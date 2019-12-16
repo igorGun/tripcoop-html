@@ -207,22 +207,20 @@ header {
   flex-wrap: nowrap;
 }
 
-.div-header-logo {
-  flex-basis: 15%;
-}
-
 .header-logo {
   height: 60px;
 }
 
 .header-menu-items {
   display: flex;
-  flex-basis: 50%;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
 }
 
 .nav-item.header-nav-item {
   padding: 20px 8px;
+  margin: 0 0.625rem;
 }
 
 .nav-link.header-nav-link {
@@ -245,7 +243,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  flex-basis: 24%;
+  margin-right: 60px;
   /* display: none; */
 }
 
@@ -259,20 +257,15 @@ header {
   flex-wrap: nowrap !important;
 }
 
+.auth-clients li:last-child {
+  margin: 0;
+}
+
 .auth-icon.instagram {
   background: url(img/icons8-instagram-48.png) no-repeat;
   margin: -7px 0 0 -7px;
   width: 42px;
   height: 42px;
-}
-
-.btn-dark.btn-dark-sign_in {
-  border-radius: 25px;
-  border: 2px solid #ffd700;
-  padding: 5px 22px;
-  font-family: "PT Sans", sans-serif;
-  font-size: 13px;
-  /* display: none; */
 }
 
 .btn-dark.btn-dark-out {
@@ -287,7 +280,6 @@ header {
   display: block;
 }
 
-.btn-dark.btn-dark-sign_in:hover,
 .btn-dark.btn-dark-out:hover {
   border: 1px solid #ffd700;
   background: #ffd70025;
@@ -666,7 +658,7 @@ header {
 @media screen and (max-width: 1200px) {
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 868px) {
   .navbar.header-navbar {
     flex-wrap: wrap;
     padding: 5px 0;
@@ -678,7 +670,7 @@ header {
     flex-direction: column;
     justify-content: center;
     background: #192731;
-    margin-top: 5px;
+    margin: 5px 0 0 0;
     display: none;
     position: absolute;
     top: 64px;
