@@ -41,49 +41,50 @@ function markerWindow() {
     '</div>' +
     '</div>' +
     '<div class="info-window__content">' +
-    // '<form class="info-window__form" id="set-trip-form" action="/set" method="post">' +
-    // '<input type="hidden" name="_csrf" value="S-cv4TLi4siliW_mRwtO7CgNPS-3ouOJIbNWU4BXRSUCk0K2ddeTuvfPF4AdMn-4HX1naMP2kN5v4RIBy2YvSg==">' +
-    // '<div class="form-group field-tripsroutes-start_point">' +
-    // '<input type="hidden" id="tripsroutes-start_point" class="form-control" name="TripsRoutes[start_point]" value="">' +
-    // '<div class="help-block"></div>' +
-    // '</div>' +
-    // '<div class="form-group field-tripsroutes-end_point">' +
-    // '<input type="hidden" id="tripsroutes-end_point" class="form-control" name="TripsRoutes[end_point]" value="">' +
-    // '<div class="help-block"></div>' +
-    // '</div>' +
-    // '<div class="form-group field-trips-polygone required">' +
-    // '<input type="hidden" id="trips-polygone" class="form-control" name="Trips[polygone]" value="">' +
-    // '<div class="help-block"></div>' +
-    // '</div>' +
-    // '<div class="form-group field-trips-max_companions">' +
-    // '<label class="control-label" for="trips-max_companions">Max Companions</label>' +
-    // '<div>' +
-    // '<select id="trips-max_companions" class="form-control" name="Trips[max_companions]">' +
-    // '<option value="1">1</option>' +
-    // '<option value="2" selected="">2</option>' +
-    // '<option value="3">3</option>' +
-    // '</select>' +
-    // '<div class="help-block"></div>' +
-    // '</div>' +
-    // '</div>' +
-    // '<div class="form-group field-trips-departure_time required">' +
-    // '<label class="control-label" for="trips-departure_time">Departure Time</label>' +
-    // '<div>' +
-    // '<select id="trips-departure_time" class="form-control" name="Trips[departure_time]" aria-required="true">' +
-    // '<option value="0">5</option>' +
-    // '<option value="1">10</option>' +
-    // '<option value="2">15</option>' +
-    // '<option value="3">20</option>' +
-    // '<option value="4">30</option>' +
-    // '<option value="5">60</option>' +
-    // '<option value="6">90</option>' +
-    // '<option value="7">120</option>' +
-    // '</select>' +
-    // '<div class="help-block"></div>' +
-    // '</div>' +
-    // '</div>' +
+    '<form class="info-window__form" id="set-trip-form" action="/set" method="post">' +
+    '<input type="hidden" name="_csrf" value="S-cv4TLi4siliW_mRwtO7CgNPS-3ouOJIbNWU4BXRSUCk0K2ddeTuvfPF4AdMn-4HX1naMP2kN5v4RIBy2YvSg==">' +
+    '<div class="form-group field-tripsroutes-start_point">' +
+    '<input type="hidden" id="tripsroutes-start_point" class="form-control" name="TripsRoutes[start_point]" value="">' +
+    '<div class="help-block"></div>' +
+    '</div>' +
+    '<div class="form-group field-tripsroutes-end_point">' +
+    '<input type="hidden" id="tripsroutes-end_point" class="form-control" name="TripsRoutes[end_point]" value="">' +
+    '<div class="help-block"></div>' +
+    '</div>' +
+    '<div class="form-group field-trips-polygone required">' +
+    '<input type="hidden" id="trips-polygone" class="form-control" name="Trips[polygone]" value="">' +
+    '<div class="help-block"></div>' +
+    '</div>' +
+    '<div class="form-group field-trips-max_companions">' +
+    '<label class="control-label" for="trips-max_companions">Max Companions</label>' +
+    '<div>' +
+    '<select id="trips-max_companions" class="form-control" name="Trips[max_companions]">' +
+    '<option value="1">1</option>' +
+    '<option value="2" selected="">2</option>' +
+    '<option value="3">3</option>' +
+    '</select>' +
+    '<div class="help-block"></div>' +
+    '</div>' +
+    '</div>' +
+    '<div class="form-group field-trips-departure_time required">' +
+    '<label class="control-label" for="trips-departure_time">Departure Time</label>' +
+    '<div>' +
+    '<select id="trips-departure_time" class="form-control" name="Trips[departure_time]" aria-required="true">' +
+    '<option value="0">5</option>' +
+    '<option value="1">10</option>' +
+    '<option value="2">15</option>' +
+    '<option value="3">20</option>' +
+    '<option value="4">30</option>' +
+    '<option value="5">60</option>' +
+    '<option value="6">90</option>' +
+    '<option value="7">120</option>' +
+    '</select>' +
+    '<div class="help-block"></div>' +
+    '</div>' +
+    '</div>' +
     '<div class="form-group">' +
     '<div class="info-window__form-buttons">' +
+    '<button type="button" class="btn btn-secondary">Отменить</button>' +
     '<button type="submit" id="set-trip-button" class="btn btn-success" onclick="openChatBoxButton()">Искать поездку</button>' +
     '</div>' +
     '</div>' +
