@@ -158,3 +158,14 @@ function openChatBoxButton(e) {
   $('.card-chat').css('height', '100%');
   $('#map').css('height', '80%');
 }
+
+// change text on info button
+function deleteTextButton() {
+  if ($(window).width() <= '460') {
+    $('#set-trip-button').text('Искать');
+  } else {
+    $('#set-trip-button').text('Искать поездку');
+  }
+
+}
+$(window).resize(deleteTextButton);

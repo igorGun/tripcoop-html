@@ -127,12 +127,17 @@ button:not(:disabled) {
 
 .info-window__header {
   display: flex;
+  justify-content: space-between;
 }
 
 .info-window__actions {
   padding-left: 10px;
   display: flex;
   flex-wrap: nowrap;
+}
+
+.info-window__actions .btn {
+  padding: 0 5px;
 }
 
 .info-window__btn {
@@ -146,7 +151,7 @@ button:not(:disabled) {
 }
 
 .info-window__content {
-  margin-top: 10px;
+  margin-top: -10px;
   margin-bottom: 5px;
 }
 
@@ -161,7 +166,16 @@ button:not(:disabled) {
 .info-window__form-buttons {
   padding-top: 1px;
   display: flex;
-  width: 50%;
+  max-width: 100%;
+  justify-content: space-between;
+}
+
+.info-window__form-buttons .btn {
+  flex-basis: 48%;
+}
+
+.gm-style-iw-d {
+  max-width: 350px !important;
 }
 
 .order-form {
@@ -441,7 +455,6 @@ header {
 
 .card-body.card-body_chat {
   padding: 10px 10px 20px 10px;
-
   font-size: 14px;
   overflow-y: auto;
   height: 300px;
@@ -620,40 +633,17 @@ header {
     padding: 2px;
   }
 
-  .info-window__form-buttons {
-    width: 100%;
-  }
-
-  .info-window__form-buttons .btn {
-    margin-bottom: 10px;
-  }
-
-  .info-window__form-buttons .btn:last-child {
-    margin-bottom: 0;
-    width: 100%;
-  }
-
-  .order-form {
-    flex-direction: column-reverse;
-  }
-
   .order-form .btn {
     width: 100%;
     margin: 2px 0;
   }
+
+  .info-window__form-buttons .btn {
+    padding: 5px;
+  }
 }
 
 @media screen and (min-width: 460px) {
-  .info-window__form-buttons {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    max-width: 100%;
-  }
-
-  .info-window__form-buttons .btn {
-    flex: 1 0 auto;
-  }
 }
 
 @media screen and (max-width: 1200px) {
