@@ -348,7 +348,6 @@ header {
 
 .form-header {
   text-align: center;
-  margin-bottom: 9px;
 }
 
 .form-order {
@@ -364,12 +363,19 @@ header {
 
 .input-line {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .input-group.mb-3.where-input {
-  margin-right: 10px;
   width: 280px;
   height: auto;
+  margin: 8px 10px 8px 0 !important;
+}
+
+.form-right-icons img {
+  width: 28px;
+  height: 28px;
 }
 
 .gps-img {
@@ -394,13 +400,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 38px;
+  height: 28px;
 }
 
 .form-right-icons.add {
-  border: 1px solid #ced4da;
-  border-radius: 50%;
-  padding: 5px 10px;
+  border: 2px solid rgb(100, 99, 99);
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
 }
 
 .form-right-icons.add:hover {
@@ -408,7 +415,7 @@ header {
 }
 
 .gps-img.add {
-  padding: 2px;
+  padding: 6px;
 }
 
 .gps-img.edit {
@@ -640,6 +647,9 @@ header {
 
   .info-window__form-buttons .btn {
     padding: 5px;
+  }
+  .input-group.mb-3.where-input {
+    width: 220px;
   }
 }
 
