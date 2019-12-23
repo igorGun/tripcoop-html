@@ -426,11 +426,11 @@ header {
 
 .chat-block {
   position: absolute;
-  top: 150px;
+  top: 120px;
   z-index: 10;
   right: 50px;
   padding: 10px;
-  width: 350px;
+  width: 400px;
 }
 
 .card-chat {
@@ -442,7 +442,7 @@ header {
 .card-header.card-header_chat {
   background: #0e161c;
   color: white;
-  padding: 4px 10px;
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -450,21 +450,25 @@ header {
 }
 
 .close.chat-close-btn {
-  font-size: 60px;
-}
-
-.close.chat-close-btn {
+  font-size: 50px;
   color: yellow;
   text-shadow: none;
   font-weight: 300;
   opacity: 0.8;
+  margin-bottom: 6px;
+}
+
+.close.chat-close-btn:hover {
+  font-size: 50px;
+  color: white;
+  opacity: 1;
 }
 
 .card-body.card-body_chat {
   padding: 10px 10px 20px 10px;
   font-size: 14px;
   overflow-y: auto;
-  height: 300px;
+  height: 360px;
   color: #232b23;
 }
 
@@ -537,7 +541,7 @@ header {
 }
 
 .chat-footer {
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 0 0 8px 8px;
   background: white;
 }
@@ -547,14 +551,18 @@ header {
   height: 20px;
 }
 
-.form-control.message-input {
-  height: 40px;
-  border-radius: 8px !important;
+.chat-footer .input-group {
+  align-items: center;
 }
 
-.form-control.message-input:focus {
+.chat-footer .input-group .form-control {
+  border: 2px solid white;
+  border-radius: 0 0 0 8px !important;
+}
+
+.chat-footer .input-group .form-control:focus {
   box-shadow: none;
-  border-color: #ced4da;
+  border-color: white;
 }
 
 .btn.send-btn:focus {
