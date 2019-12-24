@@ -110,23 +110,32 @@ $(document).ready(function() {
     $('#fa-times-icon').toggle();
   });
 
-  // open-close order-block
+  // open order-block
   $('.btn.btn-success.open-order-box-btn').click(function(e) {
     $('.order-block').toggle();
-    $('.order-block').css('display') === 'block'
-      ? $(this)
-          .text('Скрить')
-          .css('max-width', '400px')
-          .css('margin', '0 auto')
-      : $(this)
-          .text('Информация поездки')
-          .css('max-width', '100%');
+    $(this).hide();
+    $('.btn.btn-success.open-box-yet').show();
+    $('.bottom-clock-form').hide();
+    $('.form-order ').css('margin-bottom', '0');
+  });
+
+  // yet button click
+  $('.btn.btn-success.open-box-yet').click(function(e) {
+    $(this).hide();
+    $('.bottom-clock-form').show();
   });
 
   // close chat-box button
   $('.close.chat-close-btn').click(function() {
     $('.chat-block').toggle();
     $('#map').css('height', '100%');
+  });
+
+  // close order-block button
+  $('.close.form-order-close-btn').click(function() {
+    $('.order-block').toggle();
+    $('.btn.btn-success.open-order-box-btn').show();
+    $('.btn.btn-success.open-box-yet').hide();
   });
 
   $('.responsive-sign-block').click(function() {
