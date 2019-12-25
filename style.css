@@ -10,7 +10,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
 }
 
 /*
@@ -30,7 +30,7 @@ body {
 */
 
 .btn {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
@@ -49,9 +49,9 @@ body {
   border-radius: 4px;
 }
 
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled),
+[type='button']:not(:disabled),
+[type='reset']:not(:disabled),
+[type='submit']:not(:disabled),
 button:not(:disabled) {
   cursor: pointer;
 }
@@ -99,7 +99,7 @@ button:not(:disabled) {
 }
 
 .form-control {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
   display: block;
@@ -215,7 +215,7 @@ header {
   justify-content: space-between;
   background-color: #0e161c;
   height: auto;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   display: flex;
   flex-wrap: nowrap;
   position: absolute;
@@ -287,7 +287,7 @@ header {
   border-radius: 25px;
   border: 1px solid #ffd700;
   padding: 5px 22px;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-size: 13px;
 }
 
@@ -368,7 +368,7 @@ header {
 }
 
 .input-group.mb-3.where-input {
-  width: 280px;
+  width: 78%;
   height: auto;
   margin: 8px 10px 8px 0 !important;
 }
@@ -451,7 +451,7 @@ header {
 .card-chat {
   background: white;
   border-radius: 8px;
-  background: url("img/telegram-backg.com");
+  background: url('img/telegram-backg.com');
 }
 
 .card-header.card-header_chat {
@@ -656,7 +656,7 @@ header {
   flex-direction: column;
   border-radius: 5px;
   max-width: 300px;
-  margin: 140px auto 0 auto;
+  margin: 45% auto 0 auto;
 }
 
 .sign-in-window-header {
@@ -687,14 +687,8 @@ header {
     padding: 5px;
   }
   .input-group.mb-3.where-input {
-    width: 220px;
+    width: 75%;
   }
-}
-
-@media screen and (min-width: 460px) {
-}
-
-@media screen and (max-width: 1200px) {
 }
 
 @media screen and (max-width: 868px) {
