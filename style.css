@@ -317,6 +317,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 3px 15px 1px 0;
+  display: none;
 }
 
 .header-out_button {
@@ -340,7 +341,7 @@ header {
 /*-------------------------- order form styles -----------------*/
 .order-block {
   position: absolute;
-  top: 150px;
+  top: 100px;
   z-index: 2;
   left: 20px;
   padding: 10px;
@@ -348,6 +349,7 @@ header {
 
 .form-header {
   text-align: center;
+  margin-top: -20px;
 }
 
 .form-order {
@@ -423,12 +425,12 @@ header {
 }
 
 .close.form-order-close-btn {
-  font-size: 20px;
+  font-size: 40px;
   color: black;
   text-shadow: none;
   font-weight: 300;
   opacity: 0.8;
-  margin-right: -10px;
+  margin-right: -6px;
   margin-top: -18px;
 }
 
@@ -441,11 +443,11 @@ header {
 
 .chat-block {
   position: absolute;
-  top: 120px;
+  top: 500px;
   z-index: 10;
-  right: 50px;
+  left: 20px;
   padding: 10px;
-  width: 400px;
+  width: 406px;
 }
 
 .card-chat {
@@ -708,6 +710,7 @@ header {
     position: absolute;
     top: 64px;
     width: 100%;
+    opacity: 0.9;
   }
 
   .nav-item.header-nav-item {
@@ -723,11 +726,25 @@ header {
   }
 
   .responsive-sign-block {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    display: none;
   }
 
   .responsive-menu-button {
     display: block;
+    flex-basis: 10%;
+  }
+
+  .responsive-username-block .username-block-img {
+    padding: 0;
+    display: flex;
+  }
+
+  .responsive-username-block .username-block-img p {
+    max-width: 60px;
   }
 
   .open-box-buttons button {
@@ -745,8 +762,8 @@ header {
   }
 
   .close.form-order-close-btn {
-    margin-right: -5px;
-    margin-top: -10px;
+    margin-right: 0px;
+    margin-top: -12px;
   }
 
   .btn.btn-success.open-order-box-btn,
@@ -826,5 +843,17 @@ header {
 @media screen and (max-width: 569px) and (orientation: landscape) {
   .form-order {
     height: 200px;
+  }
+}
+
+@media screen and (max-height: 980px) and (min-width: 870px) {
+  .chat-block {
+    top: 100px;
+    right: 50px;
+    left: auto;
+  }
+
+  .order-block {
+    top: 140px;
   }
 }

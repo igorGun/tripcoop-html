@@ -11,12 +11,10 @@ var markers = {};
 
 var latlng;
 
-var myLatLng = [
-  {
-    lat: 49.992157,
-    lng: 36.231082,
-  },
-];
+var myLatLng = [{
+  lat: 49.992157,
+  lng: 36.231082,
+}, ];
 for (var i = 0; i < myLatLng.length; i++) {
   console.log(i, myLatLng[i]);
   var marker = new google.maps.Marker({
@@ -102,16 +100,16 @@ function bindMarkerinfo(marker) {
   infowindow.open(map, marker);
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   // open-close main menu
-  $('.btn.btn-primary.toggle-menu-btn').click(function(e) {
+  $('.btn.btn-primary.toggle-menu-btn').click(function (e) {
     $('#mainMenuItems').toggle();
     $('#fa-bars-icon').toggle();
     $('#fa-times-icon').toggle();
   });
 
   // open order-block
-  $('.btn.btn-success.open-order-box-btn').click(function(e) {
+  $('.btn.btn-success.open-order-box-btn').click(function (e) {
     $('.order-block').toggle();
     $(this).hide();
     $('.btn.btn-success.open-box-yet').show();
@@ -120,29 +118,29 @@ $(document).ready(function() {
   });
 
   // yet button click
-  $('.btn.btn-success.open-box-yet').click(function(e) {
+  $('.btn.btn-success.open-box-yet').click(function (e) {
     $(this).hide();
     $('.bottom-clock-form').show();
   });
 
   // close chat-box button
-  $('.close.chat-close-btn').click(function() {
+  $('.close.chat-close-btn').click(function () {
     $('.chat-block').toggle();
     $('#map').css('height', '100%');
   });
 
   // close order-block button
-  $('.close.form-order-close-btn').click(function() {
+  $('.close.form-order-close-btn').click(function () {
     $('.order-block').toggle();
     $('.btn.btn-success.open-order-box-btn').show();
     $('.btn.btn-success.open-box-yet').hide();
   });
 
-  $('.responsive-sign-block').click(function() {
+  $('.responsive-sign-block').click(function () {
     $('.sign-in-window').toggle();
   });
 
-  $('.sign-in-btn-close').click(function() {
+  $('.sign-in-btn-close').click(function () {
     $('.sign-in-window').toggle();
   });
 });
