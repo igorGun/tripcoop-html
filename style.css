@@ -292,7 +292,8 @@ header {
 }
 
 #w0 {
-  display: block;
+  /* display: block; */
+  display: none;
 }
 
 .btn-dark.btn-dark-out:hover {
@@ -307,7 +308,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
+  /* display: none; */
 }
 
 .username-block-img {
@@ -317,7 +318,6 @@ header {
   align-items: center;
   justify-content: center;
   padding: 3px 15px 1px 0;
-  display: none;
 }
 
 .header-out_button {
@@ -730,21 +730,17 @@ header {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    display: none;
+    align-items: center;
+    flex-basis: 10%;
+  }
+
+  .responsive-sign-block p {
+    margin-top: -1px;
   }
 
   .responsive-menu-button {
     display: block;
     flex-basis: 10%;
-  }
-
-  .responsive-username-block .username-block-img {
-    padding: 0;
-    display: flex;
-  }
-
-  .responsive-username-block .username-block-img p {
-    max-width: 60px;
   }
 
   .open-box-buttons button {
@@ -822,6 +818,7 @@ header {
     padding: 8px 20px;
     border-radius: 5px;
     background: rgb(53, 53, 53);
+    display: block;
   }
 }
 
