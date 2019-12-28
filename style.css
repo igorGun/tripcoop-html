@@ -349,7 +349,6 @@ header {
 
 .form-header {
   text-align: center;
-  margin-top: -20px;
 }
 
 .form-order {
@@ -425,13 +424,7 @@ header {
 }
 
 .close.form-order-close-btn {
-  font-size: 40px;
-  color: black;
-  text-shadow: none;
-  font-weight: 300;
-  opacity: 0.8;
-  margin-right: -6px;
-  margin-top: -18px;
+  display: none;
 }
 
 .btn.btn-success.open-box-yet {
@@ -757,9 +750,19 @@ header {
     left: 0;
   }
 
+  .form-header {
+    margin-top: -20px;
+  }
+
   .close.form-order-close-btn {
     margin-right: 0px;
     margin-top: -12px;
+    font-size: 40px;
+    color: black;
+    text-shadow: none;
+    font-weight: 300;
+    opacity: 0.8;
+    display: block;
   }
 
   .btn.btn-success.open-order-box-btn,
